@@ -9,8 +9,8 @@ import (
 )
 
 func TestHello(t *testing.T) {
-	result := HelloWorld("Hello")
-	if result != "Hello" {
+	result := HelloFirst()
+	if result != "Hello First" {
 		t.Fail()
 	}
 }
@@ -19,15 +19,15 @@ func TestHello(t *testing.T) {
 func TestSubTest(t *testing.T) {
 	t.Run("John", func(t *testing.T) {
 		result := HelloWorld("John")
-		require.Equal(t, "Hello World", result, "Result must be 'Hello John'")
+		require.Equal(t, "Hello John", result, "Result must be 'Hello John'")
 	})
 	t.Run("John Doe", func(t *testing.T) {
 		result := HelloWorld("John Doe")
-		require.Equal(t, "Hello World", result, "Result must be 'Hello John Doe'")
+		require.Equal(t, "Hello John Doe", result, "Result must be 'Hello John Doe'")
 	})
 	t.Run("Lorem Ipsum", func(t *testing.T) {
 		result := HelloWorld("Lorem Ipsum")
-		require.Equal(t, "Hello World", result, "Result must be 'Hello Lorem Ipsum'")
+		require.Equal(t, "Hello Lorem Ipsum", result, "Result must be 'Hello Lorem Ipsum'")
 	})
 }
 
